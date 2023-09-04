@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>ArraySort Methodh</title>
+</head>
+<body>
+    <h1>In this Page we learn about <span style="color: #4b0082;font-weight: 800;font-family: cursive;">Sort Method</span> in JavaScript</h1>
+    <h2>We use <span style="color: goldenrod;">var_name.sort(function(a,b){return a-b})</span> for Ascending Order</h2>
+    <h2>Similiarly we use <span style="color: goldenrod;">var_name.sort(function(a,b){return b-a})</span> for Descending Order</h2>
+    <br>
+    <br>
+    <h2>Let us take for Example [8,7,4,13,3,11]</h2>
+    <br>
+    <h2>Ascending Order:</h2>
+    <p id="Ascend" style="font-size: 30px;"></p>
+    <br>
+    <br>
+    <h2>Descending Order:</h2>
+    <p id="Descend" style="font-size: 30px;"></p>
+    <script>
+        const Num=[8,7,4,13,3,11];
+        Num.sort(function(a,b){return a-b})
+        document.getElementById("Ascend").innerHTML =Num;
+
+        Num.sort(function(a,b){return b-a})
+        document.getElementById("Descend").innerHTML =Num;
+    </script>
+
+</body>
+</html>
