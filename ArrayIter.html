@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Array Iterations</title>
+    <style>
+        h1{
+            font-weight: 800;
+            color: indigo;
+            text-align: center;
+        }
+        h2{
+            color: red;
+            font-weight: 800;
+        }
+        p{
+            font-size: 20px;
+        }
+        h3{
+            color: green;
+            font-size: 27px;
+            font-weight: 800;
+        }
+        pre{
+            font-size: 22px;
+            color: lightslategray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Array Iterations in JavaScript-<span style="color: goldenrod;font-weight: 500;">Part 1</span></h1>
+    <h2>Array forEach() :</h2>
+    <p>forEach() function is used to Assign value like space,text or other value for each Array Elements. </p>
+    <p>Let us consider an array that contains number values.</p>
+    <p>Array = [8,7,4,13,74,88,44]</p>
+    <p>let us display this array Elements one after other vertically.</p>
+    <p id="demo"></p>
+    <h3>Code :</h3>
+    <pre>
+        const Array=[8,7,4,13,74,88,44];
+        let ArrayElements="";
+        Array.forEach(myfunction);
+        document.getElementById("demo").innerHTML=ArrayElements;
+
+        function myfunction(value)
+        {
+            ArrayElements+=value+"<br>"
+        }
+    </pre>
+    
+    <br>
+    <h2>Array Map() :</h2>
+    <p><b>Syntax:</b><i>array_name.map(function_name)</i></p>
+    <p>Let us return the above array with multiple of 2.</p>
+    <p id="demo1"></p>
+    <h3>Code :</h3>
+    <pre>
+        const Array2=Array.map(myfunction2)
+        document.getElementById("demo1").innerHTML=Array2;
+
+        function myfunction2(value,index,array)
+        {
+          return value*2 ;
+        }
+    </pre>
+
+    <br>
+    <h2>Array flatMap() :</h2>
+    <p><b>Syntax:</b><i>array_name.faltMap(Expression)</i></p>
+    <p>Let us return the above array with multiple of 3 using <span style="color: blue;">flatMap</span></p>
+    <p id="demo2"></p>
+    <h3>Code :</h3>
+    <pre>
+        const Array3=Array.flatMap((x) => x*3);
+        document.getElementById("demo2").innerHTML=Array3;
+    </pre>
+
+    <br>
+    <h2>Array filter() :</h2>
+    <p><b>Syntax:</b><i>array_name.filter(function_name)</i></p>
+    <p>filter() are used to display specific Elements</p>
+    <p>let us display the specific Elements of this array.</p>
+    <p>First we display Elements over 4.</p>
+    <p id="demo3"></p>
+    <h3>Code :</h3>
+    <pre>
+        const Array4=Array.filter(myfunction3)
+        document.getElementById("demo3").innerHTML=Array4;
+
+        function myfunction3(value,index,array)
+        {
+            return value > 4
+        }
+    </pre>
+    <p>Now we display Elements Under 74.</p>
+    <p id="demo4"></p>
+    <h3>Code :</h3>
+    <pre>
+        const Array5=Array.filter(myfunction3_1)
+        document.getElementById("demo4").innerHTML=Array5;
+
+        function myfunction3_1(value,index,array)
+        {
+            return value < 74
+        }
+    </pre>
+
+    <br>
+    <h2>Array reduce() :</h2>
+    <p><b>Syntax:</b><i>array_name.reduce(function_name)</i></p>
+    <p>reduce() is used to dispaly sum , sub of total Elementsin array.</p>
+    <p>let us dispaly sum of total Elements in the array</p>
+    <p id="demo5"></p>
+    <h3>Code :</h3>
+    <pre>
+        let sum=Array.reduce(myfunction4)
+        document.getElementById("demo5").innerHTML=sum;
+
+        function myfunction4(total,value,index,array)
+        {
+            return total+value;
+        }
+    </pre>
+    <script src="ArrayIter.js"></script>
+    
+</body>
+</html>
