@@ -10,7 +10,7 @@ function myfunction(value)
 {
     ArrayElements+=value+"<br>"
 }
-
+                                    
 // Array Map function
 // Syntax : array_name.map(func_name)
 
