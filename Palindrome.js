@@ -1,21 +1,12 @@
 // Palindrome
 // Method : Function call
 
-function Palindrome()
-{
-    const len=String.length;
-    for(let i=0;i<len/2;i++)
-    {
-        if(String[i]!==String[len-1-i])
-        {
-            alert("Not a Palindrome");
-        }
-    }
-    alert("Palindrome");
+function palindrome(str){
+    var reg=/[\W_]/g;
+    var smallStr=str.toLowerCase().replace(reg,"");
+    var reverse=str.split().reverse().join("");
+    if(reverse===str) return true;
+
+    return false;
 }
-
-const String=prompt("Enter the String or Number:");
-
-const result=Palindrome(String);
-
-console.log(result);
+palindrome("Amma");
